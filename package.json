@@ -16,6 +16,8 @@
     "vite": "^5.4.2"
   },
   "devDependencies": {
-    "@lovable.dev/vite-tanstack-config": "^2.21.0"
+    "@lovable.dev/vite-tanstack-config": "^2.21.0",
+    "@tailwindcss/vite": "^4.3.3",
+    "tailwindcss": "^4.3.3"
   }
 }
