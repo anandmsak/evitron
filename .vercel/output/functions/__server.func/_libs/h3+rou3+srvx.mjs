@@ -670,6 +670,17 @@ function isUnhandledResponse(val) {
 }
 //#endregion
 //#region node_modules/h3/dist/cache.mjs
+function toRequest(input, options) {
+	if (typeof input === "string") {
+		let url = input;
+		if (url[0] === "/") url = `http://${safeHost((options?.headers ? new Headers(options.headers) : void 0)?.get("host"))}${url}`;
+		return new Request(url, options);
+	} else if (options || input instanceof URL) return new Request(input, options);
+	return input;
+}
+function safeHost(host) {
+	return host && !/[/\\?#@\s]/.test(host) ? host : "localhost";
+}
 function defineHandler(input) {
 	if (typeof input === "function") return handlerWithFetch(input);
 	const handler = input.handler || (input.fetch ? function _fetchHandler(event) {
@@ -773,4 +784,4 @@ function routeHandler(route) {
 	return data.middleware?.length ? data["~composed"] ??= composeHandler(data.middleware, data.handler) : data.handler;
 }
 //#endregion
-export { HTTPResponse as i, defineLazyEventHandler as n, HTTPError as r, H3Core as t };
+export { HTTPError as i, defineLazyEventHandler as n, toRequest as r, H3Core as t };
