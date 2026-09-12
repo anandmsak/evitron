@@ -1221,25 +1221,25 @@ export const RegistrationPage: React.FC<RegistrationPageProps> = ({ events, sett
                 </div>
               )}
 
-              {/* Google Drive Folder Callout & Required Confirmation */}
+              {/* Google Form Payment Upload Callout & Required Confirmation */}
               <div className="mb-6 p-4 bg-red-50/70 border border-red-200 rounded-xl">
                 <div className="flex items-start gap-3">
                   <ExternalLink className="w-5 h-5 text-[#B22222] shrink-0 mt-0.5" />
                   <div className="space-y-2">
                     <span className="text-xs font-bold text-stone-900 block">
-                      Official Payment Screenshot Drive Folder <span className="text-red-600">*</span>
+                      Official Payment Screenshot Google Form <span className="text-red-600">*</span>
                     </span>
                     <p className="text-xs text-stone-700 leading-relaxed">
-                      Please upload your payment screenshot to our official Google Drive folder before submitting. Label your file with your <strong>Team Leader Name & Phone Number</strong>.
+                      Please submit your payment screenshot and details via our official Google Form before entering your UTR below.
                     </p>
                     <a
-                      href={settings.driveUploadUrl}
+                      href={settings.participantFormUrl || 'https://docs.google.com/forms/d/e/1FAIpQLSdXYq3Pfeb_2w5jPtdjqeLJPv3sIVsb9Y1ahPUe47WT76OUYg/viewform?usp=publish-editor'}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 px-3.5 py-2 bg-[#B22222] hover:bg-[#961c1c] text-white font-bold text-xs rounded-lg shadow-xs cursor-pointer"
                     >
                       <ExternalLink className="w-3.5 h-3.5" />
-                      Open Google Drive Folder to Upload Screenshot
+                      Open Payment Upload Google Form →
                     </a>
                   </div>
                 </div>

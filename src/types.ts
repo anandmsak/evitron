@@ -83,6 +83,7 @@ export interface SiteSettings {
   techUpiQrImageUrl?: string;
   razorpayEnabled: boolean;
   driveUploadUrl: string;
+  participantFormUrl?: string;
   contactEmail: string;
   instagramHandle: string;
   venue: string;

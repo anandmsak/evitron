@@ -752,9 +752,9 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded-md flex items-center gap-1.5 font-semibold cursor-pointer shadow-xs"
-                title="View participant payment screenshots in Google Drive folder"
+                title="View participant payment Google Form responses and management dashboard"
               >
-                <ExternalLink className="w-3.5 h-3.5" /> Drive Screenshots
+                <ExternalLink className="w-3.5 h-3.5" /> Google Form Responses
               </a>
             </div>
           </div>
@@ -1170,7 +1170,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                 </div>
 
                 <div>
-                  <label className="block font-bold text-stone-700 mb-1">Google Drive Payment Screenshot Upload Link</label>
+                  <label className="block font-bold text-stone-700 mb-1">Google Form Responses & Management Link (Admin View)</label>
                   <input
                     type="url"
                     value={settingsForm.driveUploadUrl}
